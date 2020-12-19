@@ -15,9 +15,6 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let soundIdRing:SystemSoundID = 1334
-    AudioServicesPlaySystemSound(soundIdRing)
   }
 
   @IBAction func actionButton(_ sender: UIButton) {
@@ -40,7 +37,8 @@ class ViewController: UIViewController {
     var minuteCount = 0
     
     let lowGong:SystemSoundID = 1013
-    let highGong:SystemSoundID = 1005
+    //    候補1008, 1054
+    let highGong:SystemSoundID = 1054
 
     // 第一ゴング
     while hourCount < hour {
@@ -55,28 +53,33 @@ class ViewController: UIViewController {
     }
     
     // 第二ゴング
-    while quarterCount < quarter {
-      print(quarterCount, "ding-dong")
-      quarterCount += 1
-      
-      AudioServicesPlaySystemSound(highGong)
-      
-      // 0.7秒待つ
-      Thread.sleep(forTimeInterval: 0.5)
-      
-      AudioServicesPlaySystemSound(lowGong)
-      
-      // 0.7秒待つ
-      Thread.sleep(forTimeInterval: 0.7)    }
+    if quarter > 0 {
+      while quarterCount < quarter {
+        print(quarterCount, "ding-dong")
+        quarterCount += 1
+        
+        AudioServicesPlaySystemSound(highGong)
+        
+        // 0.7秒待つ
+        Thread.sleep(forTimeInterval: 0.5)
+        
+        AudioServicesPlaySystemSound(lowGong)
+        
+        // 0.7秒待つ
+        Thread.sleep(forTimeInterval: 0.7)
+      }
+    }
     
     // 第三ゴング
-    while minuteCount < minute {
-      print(minuteCount, "ding")
-      minuteCount += 1
-      
-      AudioServicesPlaySystemSound(highGong)
-      // 0.7秒待つ
-      Thread.sleep(forTimeInterval: 0.7)    }
+    if minute > 0 {
+      while minuteCount < minute {
+        print(minuteCount, "ding")
+        minuteCount += 1
+        
+        AudioServicesPlaySystemSound(highGong)
+        // 0.7秒待つ
+        Thread.sleep(forTimeInterval: 0.7)
+      }
+    }
   }
 }
-
