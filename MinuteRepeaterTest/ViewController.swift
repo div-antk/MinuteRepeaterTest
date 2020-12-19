@@ -9,16 +9,12 @@ import UIKit
 import AudioToolbox
 
 class ViewController: UIViewController {
-
-//  var soundIdRing:SystemSoundID = 1016
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
   @IBAction func actionButton(_ sender: UIButton) {
-    
     
     let now = Date()
     let time = Calendar.current.dateComponents([.hour, .minute], from: now)
@@ -42,7 +38,7 @@ class ViewController: UIViewController {
 
     // 第一ゴング
     while hourCount < hour {
-      print(hourCount, "dong")
+      print(hourCount + 1, "dong")
       
       hourCount += 1
       
@@ -55,7 +51,7 @@ class ViewController: UIViewController {
     // 第二ゴング
     if quarter > 0 {
       while quarterCount < quarter {
-        print(quarterCount, "ding-dong")
+        print(quarterCount + 1, "ding-dong")
         quarterCount += 1
         
         AudioServicesPlaySystemSound(highGong)
@@ -73,7 +69,7 @@ class ViewController: UIViewController {
     // 第三ゴング
     if minute > 0 {
       while minuteCount < minute {
-        print(minuteCount, "ding")
+        print(minuteCount + 1, "ding")
         minuteCount += 1
         
         AudioServicesPlaySystemSound(highGong)
