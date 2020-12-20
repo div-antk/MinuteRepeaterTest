@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     // 第二ゴングが鳴る場合遅延処理
-    if quarter > 1 {
+    if quarter > 0 {
       Thread.sleep(forTimeInterval: 0.7)
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     }
     
     // 第三ゴングが鳴る場合遅延処理
-    if minute > 1 {
+    if minute > 0 {
       Thread.sleep(forTimeInterval: 0.7)
     }
     
