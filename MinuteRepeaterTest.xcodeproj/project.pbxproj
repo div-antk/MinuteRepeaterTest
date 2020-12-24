@@ -24,6 +24,7 @@
 		3B9B17C4258D968C009E683F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B9B17C7258D968C009E683F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B9B17C9258D968C009E683F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BAE35262594D37500681064 /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maruSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				3B9B17C1258D9689009E683F /* Main.storyboard */,
 				3B9B17C4258D968C009E683F /* Assets.xcassets */,
 				3B9B17C6258D968C009E683F /* LaunchScreen.storyboard */,
+				3BAE35262594D37500681064 /* maruSound.mp3 */,
 				3B9B17C9258D968C009E683F /* Info.plist */,
 			);
 			path = MinuteRepeaterTest;

@@ -7,12 +7,50 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
+
+
 
 class ViewController: UIViewController {
   
+  var player:AVAudioPlayer?
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let today = Date()
+    let date = DateFormatter()
+
+    // DateFormatter を使用して書式とロケールを指定する
+    date.dateFormat = DateFormatter.dateFormat(fromTemplate: "Md", options: 0, locale: Locale(identifier: "ja_JP"))
+
+    
+    if date.string(from: today) == "12/24" {
+      
+      let url = Bundle.main.url(forResource: "marusound", withExtension: "mp3")
+      player = try AVAudioPlayer(contentsOf: url)
+      // 例外処理
+      do {
+        try player = AVAudioPlayer(contentsOf: url)
+      } catch {
+        print("ファイルがありません")
+      }
+      player?.play()
+    }
   }
+  
+//  func playSound() {
+//    // ファイル名と形式を指定して再生する
+//
+//    // 例外処理
+//    do {
+//      try player = AVAudioPlayer(contentsOf: soundURL)
+//    } catch {
+//      print("ファイルがありません")
+//    }
+//    player?.play()
+//
+//  }
   
   @IBAction func actionButton(_ sender: UIButton) {
     
