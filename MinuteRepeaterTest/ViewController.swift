@@ -15,21 +15,16 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    button.isEnabled = true
   }
   
   @IBAction func actionButton(_ sender: UIButton) {
     
-    button.backgroundColor = UIColor.black
-    button.isEnabled = false
+    button.isHidden = true
     repeater()
-    button.backgroundColor = UIColor.orange
-    button.isEnabled = true
   }
   
   func repeater() {
-
-    print(button.isEnabled)
+    
     let now = Date()
     let time = Calendar.current.dateComponents([.hour, .minute], from: now)
     
@@ -51,8 +46,7 @@ class ViewController: UIViewController {
       // 0.5秒待つ
       Thread.sleep(forTimeInterval: 0.5)
     }
-    print(button.isEnabled)
-
+    
     // 第二ゴングが鳴る場合遅延処理
     if quarter > 0 {
       Thread.sleep(forTimeInterval: 0.7)
@@ -69,13 +63,11 @@ class ViewController: UIViewController {
       // 0.5秒待つ
       Thread.sleep(forTimeInterval: 0.5)
     }
-    print(button.isEnabled)
 
     // 第三ゴングが鳴る場合遅延処理
     if minute > 0 {
       Thread.sleep(forTimeInterval: 0.7)
     }
-    print(button.isEnabled)
 
     // 第三ゴング
     for _ in 0 ..< minute {
@@ -85,6 +77,5 @@ class ViewController: UIViewController {
       // 0.5秒待つ
       Thread.sleep(forTimeInterval: 0.5)
     }
-    print(button.isEnabled)
   }
 }

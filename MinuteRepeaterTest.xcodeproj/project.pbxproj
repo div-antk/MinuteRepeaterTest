@@ -13,7 +13,6 @@
 		3B9B17C3258D9689009E683F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9B17C1258D9689009E683F /* Main.storyboard */; };
 		3B9B17C5258D968C009E683F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9B17C4258D968C009E683F /* Assets.xcassets */; };
 		3B9B17C8258D968C009E683F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9B17C6258D968C009E683F /* LaunchScreen.storyboard */; };
-		3BAE352B2595749500681064 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE352A2595749400681064 /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		3B9B17C4258D968C009E683F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B9B17C7258D968C009E683F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B9B17C9258D968C009E683F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BAE352A2595749400681064 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = "../../../Downloads/Resources/iOS14画像集/QuestionApp1素材/sound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				3B9B17BD258D9689009E683F /* SceneDelegate.swift */,
 				3B9B17BF258D9689009E683F /* ViewController.swift */,
 				3B9B17C1258D9689009E683F /* Main.storyboard */,
-				3BAE352A2595749400681064 /* sound.mp3 */,
 				3B9B17C4258D968C009E683F /* Assets.xcassets */,
 				3B9B17C6258D968C009E683F /* LaunchScreen.storyboard */,
 				3B9B17C9258D968C009E683F /* Info.plist */,
@@ -127,7 +124,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BAE352B2595749500681064 /* sound.mp3 in Resources */,
 				3B9B17C8258D968C009E683F /* LaunchScreen.storyboard in Resources */,
 				3B9B17C5258D968C009E683F /* Assets.xcassets in Resources */,
 				3B9B17C3258D9689009E683F /* Main.storyboard in Resources */,
