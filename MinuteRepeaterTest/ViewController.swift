@@ -14,17 +14,30 @@ class ViewController: UIViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    
   }
   
   @IBAction func actionButton(_ sender: UIButton) {
     
-    button.isHidden = true
-    repeater()
+    self.button.isEnabled = false
+    
+    DispatchQueue.main.async {
+      self.repeater()
+
+    }
+    
+    
+
+//    if button.isHidden == true {
+//      print(button.isHidden)
+//    }
+//    repeater()
+//    button.isHidden = false
   }
   
   func repeater() {
     
+//    button.isHidden = true
+
     let now = Date()
     let time = Calendar.current.dateComponents([.hour, .minute], from: now)
     
@@ -70,12 +83,19 @@ class ViewController: UIViewController {
     }
 
     // 第三ゴング
-    for _ in 0 ..< minute {
+    for index in 0 ..< minute {
       print("ding")
       AudioServicesPlaySystemSound(highGong)
       
       // 0.5秒待つ
       Thread.sleep(forTimeInterval: 0.5)
+      
+//      if index == minute - 1 {
+//        print("(´・ω・｀)")
+//        self.button.isEnabled = true
+//      }
     }
+    
+
   }
 }
