@@ -12,16 +12,32 @@ class ViewController: UIViewController {
   
   private var isPlaying = false
   
+//  var : UIView!
+  var animator: UIViewPropertyAnimator!
+  
   @IBOutlet weak var button: UIButton!
+  @IBOutlet weak var blueView: UIView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // アニメーションの設定
+    // タイミングカーブを.linearに設定
+    let timing = UICubicTimingParameters(animationCurve: .linear)
+
+    // アニメーションの時間を2秒、タイミングパラメータに上で定義したtimingをセット
+    animator = UIViewPropertyAnimator(duration: 0.5, timingParameters: timing)
+    // アニメーションを追加
+    animator.addAnimations {
+        self.blueView.center.y += 100
+    }
   }
   
   @IBAction func actionButton(_ sender: UIButton) {
     if isPlaying { return }
     isPlaying = true
     
+    animator.startAnimation()
     repeater()
   }
   
